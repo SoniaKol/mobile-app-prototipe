@@ -1,7 +1,6 @@
 body {
   font-family: "Inter", sans-serif;
   background-color: #f6f7f7;
-  color: #06071b;
 }
 
 h1,
@@ -293,6 +292,7 @@ button {
     width: 307px;
     height: 329px;
   }
+
   .hero-frame-img {
     position: absolute;
     bottom: 24px;
@@ -300,6 +300,7 @@ button {
     width: 328px;
     height: 350px;
   }
+
   .hero-shadow-img {
     position: absolute;
     bottom: 0;
@@ -350,21 +351,226 @@ button {
     padding-bottom: 146px;
   }
 
+  .hero-img {
+    height: 0;
+  }
+
   .hero-screen-img {
-    bottom: 62px;
+    bottom: 0;
     right: 92px;
     width: 430px;
     height: 460px;
   }
+
   .hero-frame-img {
-    bottom: 33px;
+    bottom: -27px;
     right: 55px;
     width: 459px;
     height: 489px;
   }
+
   .hero-shadow-img {
+    bottom: -60px;
     right: 110px;
     width: 394px;
     height: 391px;
+  }
+}
+
+/* main */
+
+.main {
+}
+
+/* features */
+
+.features {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  background-image: url(../images/background-gradient.png),
+    url(../images/background-gradient.png);
+  background-repeat: no-repeat;
+  background-position: top -400px center, bottom center;
+  background-size: 767px;
+  opacity: 0.9;
+}
+
+@media (min-resolution: 192dpi) {
+  .features {
+    background-image: url(../images/background-gradient@2x.png),
+      url(../images/background-gradient@2x.png);
+  }
+}
+.features-title {
+  font-weight: 700;
+  font-size: 20px;
+  color: #000;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.features-text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.42857;
+  text-align: center;
+  color: #000;
+  margin-bottom: 40px;
+}
+
+.features-img {
+  width: 280px;
+  margin: 0 auto;
+}
+
+.features-list {
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  margin-top: 44px;
+}
+
+.features-item {
+  position: relative;
+}
+
+.features-item::before {
+  content: url(../images/features-type-list.svg);
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  left: -40px;
+  top: -4px;
+}
+
+.features-item-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #000;
+  margin-bottom: 12px;
+}
+.features-item-text {
+  font-weight: 500;
+  font-size: 12px;
+  color: #000;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .features {
+    padding-bottom: 47px;
+
+    background-image: url(../images/tab-features-bg.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 429px 596px;
+    position: relative;
+  }
+
+  @media (min-resolution: 192dpi) {
+    .features {
+      background-image: url(../images/tab-features-bg@2x.png);
+    }
+  }
+
+  .features-item:last-child {
+    align-self: start;
+    position: absolute;
+    bottom: 47px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .features-title {
+    font-size: 24px;
+  }
+
+  .features-text {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .features-img {
+    width: 467px;
+    height: 592px;
+    position: absolute;
+    left: -99px;
+  }
+
+  .features-list {
+    gap: 50px;
+    padding-left: 40px;
+    align-items: end;
+  }
+
+  .features-item {
+    margin-top: 0;
+    position: relative;
+    max-width: 257px;
+  }
+
+  .features-item::before {
+    content: url(../images/features-type-list.svg);
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    left: -40px;
+    top: -4px;
+  }
+
+  .features-item-title {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 13px;
+  }
+  .features-item-text {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .features {
+    background-image: url(../images/dt-bg-1.png), url(../images/dt-bg-2.png);
+    background-size: 300px, 1100px;
+    background-position: right top, left bottom;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .features-title {
+    margin-bottom: 80px;
+  }
+
+  .features-text {
+    max-width: 855px;
+    margin: 0 auto;
+  }
+
+  .features-list {
+    margin-top: 117px;
+    margin-left: 157px;
+    margin-right: 150px;
+    align-items: start;
+    gap: 54px;
+    flex-wrap: wrap;
+    height: 600px;
+  }
+
+  .features-item {
+    height: calc((100% - 2 * 54px) / 3);
+    width: 220px;
+  }
+
+  .features-item:nth-child(n + 4) {
+    align-self: flex-end;
+  }
+
+  .features-img {
+    width: 396px;
+    height: 601px;
+    left: 500px;
+    bottom: 0;
   }
 }
