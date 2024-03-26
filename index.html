@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile App Prorotipe</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <section class="header-bar">
+        <div class="container header-bar-container">
+          <p class="header-logo">Mobileapp</p>
+          <button class="header-menu-btn">
+            <svg
+              class="heder-burger-icon"
+              width="26"
+              height="16"
+              viewBox="0 0 26 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 1H25"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M1 8H25"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M1 15H25"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+            <!-- <svg width="24" height="14" class="heder-burger-icon">
+              <use href="./images/icons.svg#icon-menu"></use>
+            </svg> -->
+          </button>
+          <nav class="heder-nav">
+            <ul class="header-nav-list">
+              <li class="header-nav-item">
+                <a href="" class="header-nav-link">HOME</a>
+              </li>
+              <li class="header-nav-item">
+                <a href="" class="header-nav-link">FEATURES</a>
+              </li>
+              <li class="header-nav-item">
+                <a href="" class="header-nav-link">TEAM</a>
+              </li>
+              <li class="header-nav-item">
+                <a href="" class="header-nav-link">TESTIMONIALS</a>
+              </li>
+              <li class="header-nav-item">
+                <a href="" class="header-nav-link">CONTACT</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+      <section class="hero">
+        <div class="container">
+          <h1 class="hero-title">Introducing Mobileapp</h1>
+          <h2 class="hero-subtitle">Download our mobile app today!</h2>
+          <ul class="hero-list">
+            <li class="hero-item">
+              Real-time updates and notifications for timely information
+            </li>
+            <li class="hero-item">
+              Robust analytics and reporting for data-driven insights
+            </li>
+            <li class="hero-item">
+              Offline capabilities for uninterrupted use
+            </li>
+          </ul>
+          <button type="button" class="hero-btn">Download</button>
+        </div>
+      </section>
+      <div class="hero-img">
+        <img
+          srcset="./images/iphone.png 1x, ./images/iphone@2x.png @x"
+          src="./images/iphone.png"
+          alt=""
+          class="hero-screen-img"
+        />
+        <img
+          srcset="./images/main.png 1x, ./images/main@2x.png 2x"
+          src="./images/main.png"
+          alt=""
+          class="hero-frame-img"
+        />
+        <img
+          srcset="./images/shadow.png 1x, ./images/shadow@2x.png 2x"
+          src="./images/shadow.png"
+          alt=""
+          class="hero-shadow-img"
+        />
+      </div>
+    </header>
+  </body>
+</html>
