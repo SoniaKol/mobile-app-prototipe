@@ -25,7 +25,7 @@
         <div class="container header-bar-container">
           <a href="" class="header-logo">Mobileapp</a>
 
-          <button class="header-menu-btn">
+          <button class="header-menu-btn" id="header-menu-btn">
             <svg
               class="heder-burger-icon"
               width="26"
@@ -60,19 +60,19 @@
           <nav class="heder-nav">
             <ul class="header-nav-list">
               <li class="header-nav-item">
-                <a href="" class="header-nav-link">HOME</a>
+                <a href="index.html" class="header-nav-link">HOME</a>
               </li>
               <li class="header-nav-item">
-                <a href="" class="header-nav-link">FEATURES</a>
+                <a href="#features" class="header-nav-link">FEATURES</a>
               </li>
               <li class="header-nav-item">
-                <a href="" class="header-nav-link">TEAM</a>
+                <a href="#team" class="header-nav-link">TEAM</a>
               </li>
               <li class="header-nav-item">
-                <a href="" class="header-nav-link">TESTIMONIALS</a>
+                <a href="#testimonials" class="header-nav-link">TESTIMONIALS</a>
               </li>
               <li class="header-nav-item">
-                <a href="" class="header-nav-link">CONTACT</a>
+                <a href="#contact" class="header-nav-link">CONTACT</a>
               </li>
             </ul>
           </nav>
@@ -118,7 +118,7 @@
       </div>
     </header>
     <main class="main">
-      <section class="features">
+      <section class="features" id="features">
         <div class="container">
           <h2 class="features-title">KEY FEATURES</h2>
           <p class="features-text">
@@ -251,7 +251,7 @@
         </div>
       </section>
       <div class="team-review-wrap">
-        <section class="team">
+        <section class="team" id="team">
           <div class="container">
             <h2 class="team-title">OUR TEAM</h2>
             <p class="team-text">
@@ -285,7 +285,7 @@
             </ul>
           </div>
         </section>
-        <section class="review">
+        <section class="review" id="testimonials">
           <div class="container">
             <div class="review-wrap">
               <h2 class="review-title">WHAT OUR COSTUMER’S SAY</h2>
@@ -305,7 +305,7 @@
       </div>
     </main>
     <footer class="footer">
-      <section class="contact">
+      <section class="contact" id="contact">
         <div class="container">
           <h2 class="contact-title">CONTACT US</h2>
           <div class="contact-container">
@@ -386,5 +386,176 @@
         </div>
       </div>
     </footer>
+    <div class="mobile-menu">
+      <div class="container">
+        <a href="" class="mobile-menu-logo">Mobileapp</a>
+        <button type="button" class="mob-menu-close" id="close-btn">
+          <svg class="mob-menu-icon" width="32" height="32">
+            <use href="./images/icons.svg#icon-close-btn"></use>
+          </svg>
+        </button>
+        <ul class="mobile-menu-list">
+          <li class="mobile-menu-item">
+            <a href="index.html" class="mobile-menu-link">HOME</a>
+          </li>
+          <li class="mobile-menu-item">
+            <a href="#features" class="mobile-menu-link">FEATURES</a>
+          </li>
+          <li class="mobile-menu-item">
+            <a href="#team" class="mobile-menu-link">TEAM</a>
+          </li>
+          <li class="mobile-menu-item">
+            <a href="#testimonials" class="mobile-menu-link">TESTIMONIALS</a>
+          </li>
+          <li class="mobile-menu-item">
+            <a href="#contact" class="mobile-menu-link">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- <div class="backdrop">
+      <div class="modal">
+        <div class="container">
+          <button type="button" class="modal-close-btn" id="modal-close-btn">
+            <svg class="modal-close-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-close-btn"></use>
+            </svg>
+          </button>
+          <p class="modal-title">Download</p>
+          <ul class="modal-download-list">
+            <li class="modal-download-item">
+              <a href="" download="app" class="modal-download-button">
+                <svg class="modal-download-icon" width="80" height="106">
+                  <use href="./images/icons.svg#icon-download"></use>
+                </svg>
+              </a>
+              <p class="modal-download-subtitle">Download free plan</p>
+              <ul class="modal-download-desc">
+                <li class="modal-download-desc-item">Basic functionality</li>
+                <li class="modal-download-desc-item">Limited access</li>
+                <li class="modal-download-desc-item">Community support</li>
+              </ul>
+            </li>
+            <li class="modal-download-item">
+              <a href="" download="app" class="modal-download-button">
+                <svg class="modal-download-icon" width="80" height="106">
+                  <use href="./images/icons.svg#icon-download"></use>
+                </svg>
+              </a>
+              <p class="modal-download-subtitle">Download for 20$</p>
+              <ul class="modal-download-desc">
+                <li class="modal-download-desc-item">Ad-free experience</li>
+                <li class="modal-download-desc-item">
+                  Unlock exclusive features
+                </li>
+                <li class="modal-download-desc-item">
+                  Content for the ultimate mobile experience
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <p class="modal-text">
+            No matter which plan you choose, we're excited to have you as part
+            of our community of mobile app users!
+          </p>
+          <div class="modal-footer-container">
+            <ul class="modal-footer-up-list">
+              <li class="modal-footer-item">
+                <svg
+                  class="modal-footer-item-icon"
+                  width="28"
+                  height="28"
+                ></svg>
+                <div class="modal-footer-text-wrap">
+                  <p class="modal-footer-text">App name</p>
+                  <p class="modal-footer-text-blue">Mobileapp.layout</p>
+                </div>
+              </li>
+              <li class="modal-footer-item">
+                <svg
+                  class="modal-footer-item-icon"
+                  width="28"
+                  height="28"
+                ></svg>
+                <div class="modal-footer-text-wrap">
+                  <p class="modal-footer-text">License</p>
+                  <p class="modal-footer-text-blue">Free</p>
+                </div>
+              </li>
+              <li class="modal-footer-item">
+                <svg
+                  class="modal-footer-item-icon"
+                  width="28"
+                  height="28"
+                ></svg>
+                <div class="modal-footer-text-wrap">
+                  <p class="modal-footer-text">Author</p>
+                  <p class="modal-footer-text-blue">Mobile Marrket App.com</p>
+                </div>
+              </li>
+              <li class="modal-footer-item">
+                <svg
+                  class="modal-footer-item-icon"
+                  width="28"
+                  height="28"
+                ></svg>
+                <div class="modal-footer-text-wrap">
+                  <p class="modal-footer-text">Data</p>
+                  <p class="modal-footer-text-blue">21.02.2022</p>
+                </div>
+              </li>
+            </ul>
+            <ul class="modal-footer-down-list">
+              <li class="modal-footer-item">
+                <svg
+                  class="modal-footer-item-icon"
+                  width="28"
+                  height="28"
+                ></svg>
+                <div class="modal-footer-text-wrap">
+                  <p class="modal-footer-text">OC</p>
+                  <p class="modal-footer-text-blue">Windows</p>
+                </div>
+              </li>
+              <li class="modal-footer-item">
+                <svg
+                  class="modal-footer-item-icon"
+                  width="28"
+                  height="28"
+                ></svg>
+                <div class="modal-footer-text-wrap">
+                  <p class="modal-footer-text">Language</p>
+                  <p class="modal-footer-text-blue">English</p>
+                </div>
+              </li>
+              <li class="modal-footer-item">
+                <svg
+                  class="modal-footer-item-icon"
+                  width="28"
+                  height="28"
+                ></svg>
+                <div class="modal-footer-text-wrap">
+                  <p class="modal-footer-text">Size</p>
+                  <p class="modal-footer-text-blue">4.16 MB</p>
+                </div>
+              </li>
+              <li class="modal-footer-item">
+                <svg
+                  class="modal-footer-item-icon"
+                  width="28"
+                  height="28"
+                ></svg>
+                <div class="modal-footer-text-wrap">
+                  <p class="modal-footer-text">Downloads</p>
+                  <p class="modal-footer-text-blue">964</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <button type="button" class="modal-footer-btn">Download</button>
+        </div>
+      </div>
+    </div> -->
+    <script type="module" src="./app/app.js"></script>
   </body>
 </html>

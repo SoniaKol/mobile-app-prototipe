@@ -1253,3 +1253,137 @@ button {
     padding-bottom: 28px;
   }
 }
+
+/* mobile menu */
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: #07081c;
+
+  background-image: url(../images/footer-bg.png);
+  background-position: bottom;
+
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mobile-menu.is-open {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-menu-logo {
+  font-weight: 400;
+  font-size: 28px;
+  color: #fff;
+  padding-top: 34px;
+  display: block;
+}
+
+.mob-menu-close {
+  position: absolute;
+  top: 34px;
+  right: 20px;
+  /* width: 32px;
+    height: 32px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+}
+.mob-menu-icon {
+  fill: #fff;
+}
+.mobile-menu-list {
+  margin-top: 52px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  align-items: center;
+}
+.mobile-menu-item {
+}
+.mobile-menu-link {
+  font-weight: 500;
+  font-size: 32px;
+  text-align: center;
+  color: #fff;
+}
+
+/* modal */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: transparent;
+  width: 100%;
+  height: 100%;
+}
+.modal {
+  position: absolute;
+  background-color: #07081c;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background-color: transparent;
+}
+.modal-close-icon {
+  fill: #fff;
+}
+.modal-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.4;
+  text-align: center;
+  color: #fff;
+  margin-top: 48px;
+  margin-bottom: 24px;
+}
+.modal-download-list {
+}
+.modal-download-item {
+  color: #fff;
+}
+.modal-download-button {
+}
+.modal-download-icon {
+}
+.modal-download-subtitle {
+}
+.modal-download-desc {
+}
+.modal-download-desc-item {
+}
+.modal-text {
+}
+.modal-footer-container {
+}
+.modal-footer-up-list {
+}
+.modal-footer-item {
+}
+.modal-footer-item-icon {
+}
+.modal-footer-text-wrap {
+}
+.modal-footer-text {
+}
+.modal-footer-text-blue {
+}
+.modal-footer-down-list {
+}
+.modal-footer-btn {
+}
