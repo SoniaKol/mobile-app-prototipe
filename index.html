@@ -21,7 +21,7 @@
   </head>
   <body>
     <header class="header">
-      <section class="header-bar">
+      <section class="header-bar" id="header-bar">
         <div class="container header-bar-container">
           <a href="" class="header-logo">Mobileapp</a>
 
@@ -413,9 +413,9 @@
         </ul>
       </div>
     </div>
-    <!-- <div class="backdrop">
+    <div class="backdrop">
       <div class="modal">
-        <div class="container">
+        <div class="modal-container">
           <button type="button" class="modal-close-btn" id="modal-close-btn">
             <svg class="modal-close-icon" width="24" height="24">
               <use href="./images/icons.svg#icon-close-btn"></use>
@@ -424,34 +424,51 @@
           <p class="modal-title">Download</p>
           <ul class="modal-download-list">
             <li class="modal-download-item">
-              <a href="" download="app" class="modal-download-button">
-                <svg class="modal-download-icon" width="80" height="106">
-                  <use href="./images/icons.svg#icon-download"></use>
-                </svg>
-              </a>
-              <p class="modal-download-subtitle">Download free plan</p>
-              <ul class="modal-download-desc">
-                <li class="modal-download-desc-item">Basic functionality</li>
-                <li class="modal-download-desc-item">Limited access</li>
-                <li class="modal-download-desc-item">Community support</li>
-              </ul>
+              <input
+                type="radio"
+                name="download-check"
+                id="download-free"
+                class="download-check visually-hidden"
+              />
+              <label for="download-free" class="modal-download-item-label">
+                <a href="" download="app" class="modal-download-button">
+                  <svg class="modal-download-icon" width="80" height="106">
+                    <use href="./images/icons.svg#icon-download"></use>
+                  </svg>
+                </a>
+                <p class="modal-download-subtitle">Download free plan</p>
+                <ul class="modal-download-desc">
+                  <li class="modal-download-desc-item">Basic functionality</li>
+                  <li class="modal-download-desc-item">Limited access</li>
+                  <li class="modal-download-desc-item">Community support</li>
+                </ul>
+              </label>
             </li>
+
             <li class="modal-download-item">
-              <a href="" download="app" class="modal-download-button">
-                <svg class="modal-download-icon" width="80" height="106">
-                  <use href="./images/icons.svg#icon-download"></use>
-                </svg>
-              </a>
-              <p class="modal-download-subtitle">Download for 20$</p>
-              <ul class="modal-download-desc">
-                <li class="modal-download-desc-item">Ad-free experience</li>
-                <li class="modal-download-desc-item">
-                  Unlock exclusive features
-                </li>
-                <li class="modal-download-desc-item">
-                  Content for the ultimate mobile experience
-                </li>
-              </ul>
+              <input
+                type="radio"
+                name="download-check"
+                id="download-pay"
+                class="download-check visually-hidden"
+              />
+              <label for="download-pay" class="modal-download-item-label">
+                <a href="" download="app" class="modal-download-button">
+                  <svg class="modal-download-icon" width="80" height="106">
+                    <use href="./images/icons.svg#icon-download"></use>
+                  </svg>
+                </a>
+                <p class="modal-download-subtitle">Download for 20$</p>
+                <ul class="modal-download-desc">
+                  <li class="modal-download-desc-item">Ad-free experience</li>
+                  <li class="modal-download-desc-item">
+                    Unlock exclusive features
+                  </li>
+                  <li class="modal-download-desc-item">
+                    Content for the ultimate mobile experience
+                  </li>
+                </ul>
+              </label>
             </li>
           </ul>
           <p class="modal-text">
@@ -461,44 +478,36 @@
           <div class="modal-footer-container">
             <ul class="modal-footer-up-list">
               <li class="modal-footer-item">
-                <svg
-                  class="modal-footer-item-icon"
-                  width="28"
-                  height="28"
-                ></svg>
+                <svg class="modal-footer-item-icon" width="28" height="28">
+                  <use href="./images/icons.svg#icon-app-name"></use>
+                </svg>
                 <div class="modal-footer-text-wrap">
                   <p class="modal-footer-text">App name</p>
                   <p class="modal-footer-text-blue">Mobileapp.layout</p>
                 </div>
               </li>
               <li class="modal-footer-item">
-                <svg
-                  class="modal-footer-item-icon"
-                  width="28"
-                  height="28"
-                ></svg>
+                <svg class="modal-footer-item-icon" width="28" height="28">
+                  <use href="./images/icons.svg#icon-license"></use>
+                </svg>
                 <div class="modal-footer-text-wrap">
                   <p class="modal-footer-text">License</p>
                   <p class="modal-footer-text-blue">Free</p>
                 </div>
               </li>
               <li class="modal-footer-item">
-                <svg
-                  class="modal-footer-item-icon"
-                  width="28"
-                  height="28"
-                ></svg>
+                <svg class="modal-footer-item-icon" width="28" height="28">
+                  <use href="./images/icons.svg#icon-author"></use>
+                </svg>
                 <div class="modal-footer-text-wrap">
                   <p class="modal-footer-text">Author</p>
                   <p class="modal-footer-text-blue">Mobile Marrket App.com</p>
                 </div>
               </li>
               <li class="modal-footer-item">
-                <svg
-                  class="modal-footer-item-icon"
-                  width="28"
-                  height="28"
-                ></svg>
+                <svg class="modal-footer-item-icon" width="28" height="28">
+                  <use href="./images/icons.svg#icon-data"></use>
+                </svg>
                 <div class="modal-footer-text-wrap">
                   <p class="modal-footer-text">Data</p>
                   <p class="modal-footer-text-blue">21.02.2022</p>
@@ -507,44 +516,36 @@
             </ul>
             <ul class="modal-footer-down-list">
               <li class="modal-footer-item">
-                <svg
-                  class="modal-footer-item-icon"
-                  width="28"
-                  height="28"
-                ></svg>
+                <svg class="modal-footer-item-icon" width="28" height="28">
+                  <use href="./images/icons.svg#icon-oc"></use>
+                </svg>
                 <div class="modal-footer-text-wrap">
                   <p class="modal-footer-text">OC</p>
                   <p class="modal-footer-text-blue">Windows</p>
                 </div>
               </li>
               <li class="modal-footer-item">
-                <svg
-                  class="modal-footer-item-icon"
-                  width="28"
-                  height="28"
-                ></svg>
+                <svg class="modal-footer-item-icon" width="28" height="28">
+                  <use href="./images/icons.svg#icon-language"></use>
+                </svg>
                 <div class="modal-footer-text-wrap">
                   <p class="modal-footer-text">Language</p>
                   <p class="modal-footer-text-blue">English</p>
                 </div>
               </li>
               <li class="modal-footer-item">
-                <svg
-                  class="modal-footer-item-icon"
-                  width="28"
-                  height="28"
-                ></svg>
+                <svg class="modal-footer-item-icon" width="28" height="28">
+                  <use href="./images/icons.svg#icon-size"></use>
+                </svg>
                 <div class="modal-footer-text-wrap">
                   <p class="modal-footer-text">Size</p>
                   <p class="modal-footer-text-blue">4.16 MB</p>
                 </div>
               </li>
               <li class="modal-footer-item">
-                <svg
-                  class="modal-footer-item-icon"
-                  width="28"
-                  height="28"
-                ></svg>
+                <svg class="modal-footer-item-icon" width="28" height="28">
+                  <use href="./images/icons.svg#icon-downloads"></use>
+                </svg>
                 <div class="modal-footer-text-wrap">
                   <p class="modal-footer-text">Downloads</p>
                   <p class="modal-footer-text-blue">964</p>
@@ -555,7 +556,14 @@
           <button type="button" class="modal-footer-btn">Download</button>
         </div>
       </div>
-    </div> -->
+    </div>
+
+    <a href="#header-bar" class="up-button">
+      <svg class="up-button-icon">
+        <use href="./images/icons.svg#icon-list-type"></use>
+      </svg>
+    </a>
+
     <script type="module" src="./app/app.js"></script>
   </body>
 </html>

@@ -36,8 +36,27 @@ input {
   font-family: inherit;
 }
 
+/* label {
+  margin: 0;
+  padding: 0;
+} */
+
 button {
   cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .container {
@@ -1322,15 +1341,37 @@ button {
 
 .backdrop {
   position: fixed;
+  z-index: 9999;
   top: 0;
   left: 0;
-  color: transparent;
+  background-color: rgba(255, 255, 255, 0.75);
   width: 100%;
   height: 100%;
+  overflow-y: auto;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
+
+.backdrop.is-open {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-container {
+  padding-left: 24px;
+  padding-right: 24px;
+  margin: 0 auto;
+}
+
 .modal {
   position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: #07081c;
+  padding-bottom: 48px;
 }
 
 .modal-close-btn {
@@ -1340,50 +1381,209 @@ button {
   border: none;
   background-color: transparent;
 }
+
 .modal-close-icon {
   fill: #fff;
 }
+
 .modal-title {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.4;
   text-align: center;
   color: #fff;
-  margin-top: 48px;
+  padding-top: 48px;
   margin-bottom: 24px;
 }
 .modal-download-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
-.modal-download-item {
+.modal-download-item-label {
   color: #fff;
+  padding: 28px 25px 48px 20px;
+  width: 232px;
+  height: 394px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid #b544fe;
+  border-radius: 6px;
+}
+
+.download-check:checked + .modal-download-item-label {
+  background-image: linear-gradient(99deg, #00c5eb 0%, #b544fe 100%);
+  border-color: transparent;
 }
 .modal-download-button {
+  display: block;
+  margin: 0 auto;
 }
 .modal-download-icon {
+  fill: #fff;
 }
 .modal-download-subtitle {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  color: #fff;
 }
 .modal-download-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 .modal-download-desc-item {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71429;
+  color: #fff;
+  padding-left: 18px;
+  position: relative;
+}
+
+.modal-download-desc-item::before {
+  content: url(../images/download-type-list.svg);
+  position: absolute;
+  left: -4px;
+  width: 14px;
+  height: 14px;
 }
 .modal-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+  margin-top: 28px;
+  margin-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 232px;
 }
 .modal-footer-container {
+  border-radius: 6px;
+  border: 1px solid #b544fe;
+  width: 232px;
+  /* height: 472px; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
 }
 .modal-footer-up-list {
+  border-bottom: 1px solid #b544fe;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
 }
 .modal-footer-item {
+  display: flex;
+  gap: 4px;
 }
 .modal-footer-item-icon {
+  fill: #fff;
 }
 .modal-footer-text-wrap {
 }
 .modal-footer-text {
+  font-weight: 400;
+  font-size: 12px;
+  color: #fff;
+  margin-bottom: 4px;
 }
 .modal-footer-text-blue {
+  font-weight: 400;
+  font-size: 12px;
+  color: #1ab9fd;
 }
 .modal-footer-down-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
 }
 .modal-footer-btn {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 232px;
+  height: 42px;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  background-image: linear-gradient(99deg, #00c5eb 0%, #b544fe 100%);
+}
+
+@media screen and (min-width: 768px) {
+  .modal-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .modal {
+    padding-bottom: 32px;
+    width: 568px;
+    height: 936px;
+  }
+
+  .modal-title {
+    font-size: 24px;
+    line-height: 1.17;
+    padding-top: 32px;
+    margin-bottom: 28px;
+  }
+  .modal-download-list {
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    gap: 22px;
+  }
+
+  .modal-text {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .modal-footer-container {
+    display: flex;
+    width: 488px;
+    margin-bottom: 32px;
+  }
+
+  .modal-footer-up-list {
+    border-right: 1px solid #b544fe;
+    border-bottom: none;
+    width: 244px;
+  }
+}
+
+/* up button */
+
+.up-button-container {
+}
+.up-button {
+  position: fixed;
+  bottom: 20px;
+  right: 45px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.45);
+  padding: 20px;
+  transition: background-color 150ms ease-in-out;
+}
+.up-button-icon {
+  width: 40px;
+  height: 40px;
+  transform: rotate(0.75turn);
+}
+
+.up-button:hover {
+  background-color: rgba(0, 0, 0, 0.45);
 }
